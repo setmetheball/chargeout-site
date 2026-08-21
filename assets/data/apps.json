@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Work Travel Logbook",
+    "slug": "work-travel-logbook",
+    "tagline": "Mileage tracker",
+    "icon": "/assets/icons/work-travel-logbook.png",
+    "url": "/apps/work-travel-logbook/"
+  },
+  {
+    "name": "Receipt Rescue",
+    "slug": "receipt-rescue",
+    "tagline": "Scan receipts. Share by month.",
+    "icon": "/assets/icons/receipt-rescue.png",
+    "url": "/apps/receipt-rescue/"
+  },
+  {
+    "name": "Avanti Tracker",
+    "slug": "avanti-tracker",
+    "tagline": "Project time tracker",
+    "icon": "/assets/icons/avanti-tracker.png",
+    "url": "/apps/avanti-tracker/"
+  }
+]
