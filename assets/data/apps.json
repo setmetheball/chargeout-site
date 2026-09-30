@@ -19,5 +19,12 @@
     "tagline": "Project time tracker",
     "icon": "/assets/icons/avanti-tracker.png",
     "url": "/apps/avanti-tracker/"
+  },
+  {
+    "name": "Note Buddy",
+    "slug": "note-buddy",
+    "tagline": "One page. Every way you think.",
+    "icon": "/assets/icons/note-buddy.png",
+    "url": "/apps/note-buddy/"
   }
 ]

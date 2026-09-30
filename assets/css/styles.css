@@ -303,9 +303,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .orbit-app:hover, .orbit-app:focus-visible { z-index: 4; transform: translateY(-7px) scale(1.04); filter: brightness(1.08); }
 .orbit-app img { width: 100%; border-radius: 24%; }
-.orbit-app-logbook { top: 2%; left: 12%; width: 29%; transform: rotate(-7deg); }
-.orbit-app-receipts { top: 18%; right: 0; width: 34%; transform: rotate(6deg); }
-.orbit-app-avanti { bottom: 2%; left: 27%; width: 37%; transform: rotate(-2deg); }
+.orbit-app-logbook { top: 1%; left: 10%; width: 27%; transform: rotate(-7deg); }
+.orbit-app-receipts { top: 10%; right: 1%; width: 30%; transform: rotate(6deg); }
+.orbit-app-avanti { bottom: 3%; left: 10%; width: 31%; transform: rotate(-4deg); }
+.orbit-app-note-buddy { right: 4%; bottom: 1%; width: 34%; transform: rotate(4deg); }
 
 .apps-section {
   padding-block: 120px 132px;
@@ -337,14 +338,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
 .app-card {
   position: relative;
   display: flex;
-  min-height: 570px;
+  min-height: 500px;
   padding: 26px;
   overflow: hidden;
   flex-direction: column;
@@ -368,6 +369,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .app-card-logbook { --card-glow: rgba(121, 179, 238, .19); }
 .app-card-receipts { --card-glow: rgba(226, 182, 62, .14); }
 .app-card-avanti { --card-glow: rgba(36, 196, 255, .19); }
+.app-card-note-buddy { --card-glow: rgba(145, 110, 255, .2); }
 
 .app-card-top, .app-card-body, .card-link { position: relative; z-index: 1; }
 .app-card-top { display: flex; align-items: flex-start; justify-content: space-between; }
@@ -498,7 +500,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .privacy-callout h2 { margin: 0; font-size: clamp(36px, 4vw, 58px); font-weight: 600; letter-spacing: -.05em; line-height: 1; }
 .privacy-callout p { margin: 0; align-self: end; color: var(--ink-soft); font-size: 17px; }
 .privacy-callout p a { color: var(--cyan); }
-.hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
+.plan-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.plan-card {
+  display: flex;
+  min-height: 390px;
+  padding: 30px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.014));
+}
+.plan-card-pro {
+  border-color: rgba(71,217,255,.27);
+  background: radial-gradient(circle at 88% 5%, rgba(71,217,255,.11), transparent 20rem), rgba(9, 29, 50, .72);
+}
+.plan-label { margin: 0 0 10px; color: var(--cyan); font-size: 11px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.plan-card h3 { margin: 0; font-size: clamp(30px, 3vw, 42px); font-weight: 610; letter-spacing: -.045em; line-height: 1; }
+.plan-price { margin: 14px 0 0; color: var(--ink-soft); font-size: 15px; }
+.plan-price strong { color: var(--ink); font-size: 22px; }
+.plan-features { display: grid; gap: 0; margin: 28px 0 0; padding: 0; list-style: none; }
+.plan-features li { padding: 13px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 15px; }
+.plan-features li::before { margin-right: 10px; color: var(--cyan); content: "✓"; }
+.pricing-note { max-width: 780px; margin: 26px 0 0; color: var(--ink-faint); font-size: 13px; }
+.hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 52px; }
 .hub-card { display: flex; min-height: 300px; padding: 25px; flex-direction: column; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.025); }
 .hub-card img { width: 76px; border-radius: 24%; box-shadow: 0 14px 32px rgba(0,0,0,.32); }
 .hub-card h2 { margin: 30px 0 8px; font-size: 26px; font-weight: 600; letter-spacing: -.035em; }
@@ -546,6 +570,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .principles-intro { position: static; }
   .content-heading, .privacy-callout { grid-template-columns: 1fr; gap: 30px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .plan-comparison { grid-template-columns: 1fr; }
   .hub-grid { grid-template-columns: 1fr; }
   .hub-card { min-height: 260px; }
 }

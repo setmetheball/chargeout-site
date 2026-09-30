@@ -1,6 +1,6 @@
 # ChargeOut Labs — Simple tools. Better work.
 
-Static website for ChargeOut Labs and the public marketing, support and privacy pages for Work Travel Logbook, Receipt Rescue and Avanti Tracker.
+Static website for ChargeOut Labs and the public marketing, support and privacy pages for Work Travel Logbook, Receipt Rescue, Avanti Tracker and Note Buddy.
 
 ## Publishing
 
@@ -13,7 +13,9 @@ The site is designed for GitHub Pages at `https://chargeout.net` and needs no bu
 
 ## App assets
 
-The three 1024 × 1024 PNG files in `assets/icons` are local copies of the current App Store icons from the source Xcode projects. The website has no runtime dependency on those projects. `assets/data/apps.json` is the compact app manifest to update when another ChargeOut Labs app is added.
+The four 1024 × 1024 PNG files in `assets/icons` are local copies of the current app icons from the source Xcode projects. The website has no runtime dependency on those projects. `assets/data/apps.json` is the compact app manifest to update when another ChargeOut Labs app is added.
+
+Note Buddy’s public copy reflects the current app source: private CloudKit sync, optional Calendar and Reminders access, on-device handwriting and attachment recognition, and on-device Apple Intelligence. Private Cloud Compute is not enabled. The advertised AU$7.99 one-time Pro purchase is planned launch pricing and must not be presented as available until StoreKit entitlement handling is implemented and the purchase is approved in App Store Connect.
 
 ## Local preview
 
