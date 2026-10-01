@@ -36,11 +36,11 @@ const legalPages = {
         ],
         [
             "2. Information stored by the app",
-            "The app stores receipt images, recognised text, dates, biller or merchant names, expense reasons, built-in and custom tags, scan timestamps, thumbnails and monthly PDF files. Reports for a month, quarter, calendar year, Australian tax year or custom date range are generated on your device. App settings and custom tags are stored locally; a shared inbox passes imported receipts from the share extension to the main app on the same iPhone."
+            "The app stores receipt images, recognised text, dates, biller or merchant names, expense reasons, built-in and custom tags, scan timestamps, optional user-confirmed AUD amounts, thumbnails and monthly PDF files. It also stores whether your free PDF export has completed. Reports for a month, quarter, calendar year, Australian tax year or custom date range are generated on your device. App settings and custom tags are stored locally; a shared inbox passes imported receipts from the share extension to the main app on the same iPhone."
         ],
         [
             "3. Camera and text recognition",
-            "Camera access is used only when you choose to scan a receipt. Apple’s document scanner captures receipt pages and Apple Vision recognises text on the device to suggest the date and biller. Recognition does not require Apple Intelligence or a cloud AI service. Receipt Rescue does not upload your camera scans or recognised text to ChargeOut."
+            "Camera access is used only when you choose to scan a receipt. Apple’s document scanner captures receipt pages and Apple Vision recognises text on the device to suggest the date, biller and an explicit AUD receipt total when one can be identified. You check and correct suggestions before saving; ambiguous or explicitly foreign-currency totals are not suggested. Recognition does not require Apple Intelligence or a cloud AI service. Receipt Rescue does not upload your camera scans or recognised text to ChargeOut."
         ],
         [
             "4. Importing digital receipts and internet access",
@@ -48,7 +48,7 @@ const legalPages = {
         ],
         [
             "5. Sharing receipt reports",
-            "You choose when to share a PDF and select the recipient or destination through the iOS share sheet. Shared reports contain receipt images and may include dates, merchants, expense reasons and tags. ChargeOut does not receive a copy unless you choose to send one to us. The destination you choose, including an email provider or cloud-storage service, has its own privacy practices. You can remove exported copies from those destinations using their controls."
+            "You choose when to share a PDF and select the recipient or destination through the iOS share sheet. Shared reports contain receipt images and may include dates, merchants, expense reasons, tags and recorded AUD totals. A summary identifies missing amounts and overlapping tags. ChargeOut does not receive a copy unless you choose to send one to us. The destination you choose, including an email provider or cloud-storage service, has its own privacy practices. You can remove exported copies from those destinations using their controls."
         ],
         [
             "6. iPhone backups and iCloud",
@@ -60,7 +60,7 @@ const legalPages = {
         ],
         [
             "8. Optional Pro export purchases",
-            "If your installed version offers a Pro export upgrade, payment is handled by Apple through the App Store. Apple’s privacy policy and purchase terms apply. ChargeOut does not receive your payment-card details. The app may use Apple’s purchase status and transaction information to verify access and restore the upgrade; receipt contents are not needed to make a purchase. The features included in an upgrade and its price are shown before you buy. No custom Pro purchase service is offered by ChargeOut."
+            "If your installed version offers a Pro export upgrade, payment is handled by Apple through the App Store. Apple’s privacy policy and purchase terms apply. ChargeOut does not receive your payment-card details. The app may use Apple’s purchase status and transaction information to verify access and restore the upgrade; receipt contents are not needed to make a purchase. In versions offering Pro Exports, one completed PDF export is free, and a local setting records when it is used. Cancelling or a failed share does not consume it. Scanning, importing, tagging, editing and previews remain free. Pro unlocks unlimited monthly and custom PDF exports with a one-time purchase. Its localized App Store price is shown before you buy. Restore Purchases verifies the upgrade with the same Apple Account. No custom Pro purchase service is offered by ChargeOut."
         ],
         [
             "9. Support requests",
@@ -82,7 +82,7 @@ const legalPages = {
         ],
         [
             "Scan and check a receipt",
-            "Tap <strong>Scan a Receipt</strong>, allow camera access and position the receipt in the document scanner. Add more pages if needed. Check the suggested date and biller, enter the expense reason, choose any tags and save. The biller and expense reason are required. Text recognition happens on your iPhone; correct faded, handwritten or unusual receipts manually."
+            "Tap <strong>Scan a Receipt</strong>, allow camera access and position the receipt in the document scanner. Add more pages if needed. Check the suggested date, biller and receipt amount, enter the expense reason, choose any tags and save. Amounts are optional and explicitly in AUD; they are not currency conversions. Correct any suggested amount yourself, or leave it blank if unknown. Use a minus sign for a refund. The biller and expense reason are required. Text recognition happens on your iPhone; correct faded, handwritten or unusual receipts manually."
         ],
         [
             "Import a digital receipt",
@@ -90,19 +90,19 @@ const legalPages = {
         ],
         [
             "Use built-in and custom tags",
-            "Choose any of <strong>Personal, Work, Car and Property</strong>, or tap <strong>New Custom Tag</strong> to create your own. A receipt can have several tags. Open a saved receipt and choose <strong>Edit Details</strong> to change its tags, date, biller or expense reason. <strong>Settings → Manage Tags</strong> lets you add or remove custom tags. Removing a custom tag from the catalogue does not remove it from receipts already using it."
+            "Choose any of <strong>Personal, Work, Car and Property</strong>, or tap <strong>New Custom Tag</strong> to create your own. A receipt can have several tags. Open a saved receipt and choose <strong>Edit Details</strong> to change its tags, date, biller, expense reason or recorded AUD amount. <strong>Settings → Manage Tags</strong> lets you add or remove custom tags. Removing a custom tag from the catalogue does not remove it from receipts already using it."
         ],
         [
             "Create a report",
-            "Tap <strong>Create an Expense Report</strong> on the home screen. Choose a month, quarter, calendar year, Australian tax year or custom date range. Australian tax years run from 1 July to 30 June. Select one or more tags and choose whether receipts must match any or all selected tags. With no tags selected, both tagged and untagged receipts are included. At least one matching receipt is needed. Tap <strong>Create PDF Report</strong> to preview the report, then use Share to choose a destination. Reports contain saved receipt images; they do not calculate expense totals or tax deductions."
+            "Tap <strong>Create an Expense Report</strong> on the home screen. Choose a month, quarter, calendar year, Australian tax year or custom date range. Australian tax years run from 1 July to 30 June. Select one or more tags and choose whether receipts must match any or all selected tags. With no tags selected, both tagged and untagged receipts are included. At least one matching receipt is needed. Tap <strong>Create PDF Report</strong> to preview the report, then use <strong>Export PDF</strong> to choose a destination. Reports begin with recorded AUD totals by tag, receipt counts and missing-amount counts, followed by the saved receipt images. A receipt with several tags appears in each tag total; the overall total counts it once. Missing amounts are excluded, so the recorded total may be incomplete. Reports do not determine tax deductions or provide tax advice."
         ],
         [
             "Preview and share a monthly PDF",
-            "Open the current month or use <strong>Previous Months</strong>. Receipt Rescue maintains the monthly PDF in date order. Tap <strong>Share PDF</strong> to choose a destination. Archiving a month keeps its receipt records on the device. PDFs shared outside the app are independent copies; later edits in Receipt Rescue do not update those copies."
+            "Open the current month or use <strong>Previous Months</strong>. Receipt Rescue maintains the monthly PDF in date order. Tap <strong>Export PDF</strong> to choose a destination. New versions include the same recorded-amount summary at the front of monthly PDFs. Existing receipts with no entered amount are flagged rather than treated as known zero-value expenses. Archiving a month keeps its receipt records on the device. PDFs shared outside the app are independent copies; later edits in Receipt Rescue do not update those copies."
         ],
         [
             "Pro export upgrades",
-            "If your installed version offers a Pro export upgrade, its purchase screen explains which exports are included and shows the App Store price before purchase. Complete purchases through Apple and use the restore action offered by that version with the Apple Account used for the purchase. Availability and included features depend on your app version. Contact us if an upgrade you purchased is not recognised. Do not send payment-card details."
+            "In versions offering <strong>Pro Exports</strong>, scanning, importing, storing, tags, editing and PDF previews are free. One completed PDF export is free so you can try the report; cancellation or a failed share does not use it. After that, a one-time Pro purchase unlocks unlimited monthly and custom PDF exports, with no subscription. The purchase screen shows your localized App Store price before purchase. Open <strong>Settings → Pro Exports &amp; Restore Purchases</strong>, or choose Export PDF. To restore an upgrade, use <strong>Restore Purchases</strong> with the Apple Account used to buy it. Purchases and restores may need an internet connection. If Pro is temporarily unavailable, your saved receipts and previews remain accessible. Contact us if a purchased upgrade is not recognised. Do not send payment-card details."
         ],
         [
             "Seven-year storage and deletion",
