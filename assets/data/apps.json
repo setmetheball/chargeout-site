@@ -9,7 +9,7 @@
   {
     "name": "Receipt Rescue",
     "slug": "receipt-rescue",
-    "tagline": "Scan receipts. Share by month.",
+    "tagline": "Receipt scanning and monthly PDF reports",
     "icon": "/assets/icons/receipt-rescue.png",
     "url": "/apps/receipt-rescue/"
   },
@@ -23,7 +23,7 @@
   {
     "name": "Note Buddy",
     "slug": "note-buddy",
-    "tagline": "One page. Every way you think.",
+    "tagline": "Meeting notes and action items",
     "icon": "/assets/icons/note-buddy.png",
     "url": "/apps/note-buddy/"
   }

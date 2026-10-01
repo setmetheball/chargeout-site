@@ -93,8 +93,8 @@ if (host) {
     const content = /<(?:h[1-6]|p)\b/.test(body) ? body : `<p>${body}</p>`;
     return `<section><h2>${heading}</h2>${content}</section>`;
   }).join('');
-  document.title = `${title} — ChargeOut Labs`;
-  host.innerHTML = `<h1>${title}</h1>${kind === 'privacy' ? `<p class="effective-date">Effective date: ${app.privacyDate}</p>` : '<p class="effective-date">ChargeOut Labs app support</p>'}${sections}`;
+  document.title = `${title} | ChargeOut`;
+  host.innerHTML = `<h1>${title}</h1>${kind === 'privacy' ? `<p class="effective-date">Effective date: ${app.privacyDate}</p>` : '<p class="effective-date">ChargeOut app support</p>'}${sections}`;
   const asideIcon = document.querySelector('[data-app-icon]');
   const asideName = document.querySelector('[data-app-name]');
   if (asideIcon) { asideIcon.src = app.icon; asideIcon.alt = `${app.name} app icon`; }

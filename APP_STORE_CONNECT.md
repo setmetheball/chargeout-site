@@ -18,10 +18,10 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 | Field | Draft |
 | --- | --- |
 | Name | `Note Buddy` |
-| Subtitle | `Write notes. Find actions.` |
+| Subtitle | `Private meeting notes` |
 | Primary category | Productivity |
 | Secondary category | Business |
-| Copyright | `2026 ChargeOut Labs` |
+| Copyright | `2026 ChargeOut` |
 | Keywords | `iPhone Duo,foldable,dual screen,notes,handwriting,meetings,action items,reminders,Apple Pencil` |
 | Price | Free |
 | Platforms | iPhone, iPad and Mac from one universal app record |
@@ -33,11 +33,11 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 
 ### Description
 
-> Note Buddy is a light, private place for meeting notes on iPhone, iPad and Mac.
+> Note Buddy is a private meeting notebook for iPhone, iPad and Mac.
 >
 > Made for iPhone Duo: keep notes compact on the outer display, open to a roomy inner-display workspace, or prop it on its side to type with the note above the fold.
 >
-> Write by hand, type, add a photo or attach a file without breaking the flow. Everything stays together on one scrolling page in the order you added it.
+> Combine handwriting, typed text, photos and files in a note. Everything stays together on one scrolling page in the order you added it.
 >
 > With optional Calendar access, a new note can take the name, time and attendees of the meeting you are in. On supported devices, Apple Intelligence can summarise the page and find tasks, owners and due dates. Optional Reminders integration turns those tasks into reminders and keeps their completion state in step.
 >
@@ -61,7 +61,7 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 >
 > Handwriting is editable on iPhone and iPad and view-only on Mac. Apple Intelligence requires compatible hardware and must be enabled; simple marked-task matching remains available without it.
 >
-> Note Buddy has no ChargeOut account, advertising, analytics or tracking. Your notes sync through your private iCloud database and are not available to ChargeOut Labs. Private Cloud Compute is not enabled in current builds.
+> Note Buddy has no ChargeOut account, advertising, analytics or tracking. Your notes sync through your private iCloud database and are not available to ChargeOut. Private Cloud Compute is not enabled in current builds.
 >
 
 Keep the initial listing focused on the current app. Add the following paragraph only when the StoreKit purchase is implemented, restorable and ready to submit with the version:
@@ -108,13 +108,13 @@ Based on the current source and privacy policy:
 
 - Tracking: **No**.
 - Data used to track you: **None**.
-- Data linked to you and collected by ChargeOut Labs: **None**.
-- Data not linked to you and collected by ChargeOut Labs: **None**.
+- Data linked to you and collected by ChargeOut: **None**.
+- Data not linked to you and collected by ChargeOut: **None**.
 - App Privacy summary: **Data Not Collected**.
 - Account creation: **No account**.
 - Advertising and third-party analytics: **None**.
 
-The app does transmit user content to Apple CloudKit for private iCloud sync, but ChargeOut Labs does not receive or operate that storage. Calendar and Reminders access are optional Apple-framework integrations. Current AI processing uses Apple’s on-device Foundation Model; Private Cloud Compute is not enabled.
+The app does transmit user content to Apple CloudKit for private iCloud sync, but ChargeOut does not receive or operate that storage. Calendar and Reminders access are optional Apple-framework integrations. Current AI processing uses Apple’s on-device Foundation Model; Private Cloud Compute is not enabled.
 
 Recheck these answers if analytics, crash-reporting SDKs, a backend, Private Cloud Compute or any other data flow is added before submission.
 
