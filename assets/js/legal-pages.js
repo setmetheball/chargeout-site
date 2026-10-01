@@ -26,34 +26,102 @@ const legalPages = {
     ]
   },
   'receipt-rescue': {
-    name: 'Receipt Rescue',
-    icon: '/assets/icons/receipt-rescue.png',
-    privacyDate: '17 July 2026',
-    privacy: [
-      ['1. Overview', '<strong>Receipt Rescue does not collect personal information from users. Receipt images, recognised text, expense details and generated PDFs are processed and stored locally on the user’s iPhone. The developer does not receive, store, sell or share this information.</strong>'],
-      ['2. Information stored by the app', 'Receipt Rescue may store receipt images, text recognised from those images, receipt dates, biller or merchant names, expense reasons, scan timestamps, storage information and monthly PDF files. This information remains in local app storage.'],
-      ['3. Camera and document scanning', 'Camera access is used only when the user chooses to scan a receipt. Apple’s document scanner captures and corrects receipt pages. The app does not upload camera images to the developer or an external service.'],
-      ['4. On-device text recognition', 'Receipt Rescue uses Apple Vision to recognise text and suggest a receipt date and biller. Recognition occurs on the device and does not require Apple Intelligence or a cloud AI service.'],
-      ['5. Information collected by the developer', 'The developer does not collect information through the app. Receipt Rescue does not use analytics, advertising, tracking technologies, third-party SDKs, user accounts or a cloud database.'],
-      ['6. Sharing PDFs', 'Users may manually share a monthly PDF using the iOS share sheet. Sharing occurs only after the user chooses a destination. The developer does not receive a copy.'],
-      ['7. Internet access', 'Receipt Rescue is designed to work offline and does not require internet access to scan, recognise, organise, edit, store or generate PDFs from receipts.'],
-      ['8. Data retention and deletion', 'Users can delete individual receipts or entire months. Deleting the app removes locally stored app data, subject to normal iOS backup and restore behaviour. Share or save PDFs you wish to keep first.'],
-      ['9. Website hosting', 'The Receipt Rescue privacy and support pages are hosted using GitHub Pages. GitHub may process routine web request information. This is separate from the app, which does not send receipt data to the website or GitHub.'],
-      ['10. Changes to this policy', 'This policy may be updated if Receipt Rescue’s features or data practices change. The effective date identifies the current version.'],
-      ['11. Contact', 'For privacy questions, email <a href="mailto:info@chargeout.net">info@chargeout.net</a>.']
+    "name": "Receipt Rescue",
+    "icon": "/assets/icons/receipt-rescue.png",
+    "privacyDate": "1 October 2026",
+    "privacy": [
+        [
+            "1. Overview",
+            "Receipt Rescue stores and processes receipt records on your iPhone. ChargeOut does not receive your saved receipt images, recognised text, tags or expense reports. The app has no ChargeOut account, advertising or developer analytics. This policy explains local storage, receipt-link imports, sharing, backups and optional purchases."
+        ],
+        [
+            "2. Information stored by the app",
+            "The app stores receipt images, recognised text, dates, biller or merchant names, expense reasons, built-in and custom tags, scan timestamps, thumbnails and monthly PDF files. Reports for a month, quarter, calendar year, Australian tax year or custom date range are generated on your device. App settings and custom tags are stored locally; a shared inbox passes imported receipts from the share extension to the main app on the same iPhone."
+        ],
+        [
+            "3. Camera and text recognition",
+            "Camera access is used only when you choose to scan a receipt. Apple’s document scanner captures receipt pages and Apple Vision recognises text on the device to suggest the date and biller. Recognition does not require Apple Intelligence or a cloud AI service. Receipt Rescue does not upload your camera scans or recognised text to ChargeOut."
+        ],
+        [
+            "4. Importing digital receipts and internet access",
+            "You can share supported PDFs, images and receipt links to Receipt Rescue. Importing a file is processed locally. Importing a web link connects to the original receipt website to download or render the receipt, and the webpage may contact other services used by that website. Those services may receive the requested URL, IP address and normal web request information under their own privacy policies. Receipt Rescue uses temporary web sessions rather than its own persistent browsing history. It does not send your other saved receipts or tags to that website. Scanning, editing, storing and generating reports from saved receipts work offline; web-link imports require a connection."
+        ],
+        [
+            "5. Sharing receipt reports",
+            "You choose when to share a PDF and select the recipient or destination through the iOS share sheet. Shared reports contain receipt images and may include dates, merchants, expense reasons and tags. ChargeOut does not receive a copy unless you choose to send one to us. The destination you choose, including an email provider or cloud-storage service, has its own privacy practices. You can remove exported copies from those destinations using their controls."
+        ],
+        [
+            "6. iPhone backups and iCloud",
+            "Saved app data may be included in normal iPhone backups, including iCloud Backup if you enable it and include Receipt Rescue. Apple manages those backups using your Apple Account and device settings; ChargeOut cannot access them. Receipt Rescue does not provide live iCloud sync between devices or an in-app backup-and-restore service. Backup completion and restoration depend on your settings, available space and Apple’s backup process. Keep separate copies of important PDFs before deleting the app or changing devices."
+        ],
+        [
+            "7. Storage, retention and deletion",
+            "Receipt Rescue is designed to keep a rolling seven years of receipts, subject to available device storage. It does not automatically remove receipts when they reach seven years. You can delete individual receipts, entire months, or confirm removal of receipts older than the seven-year cutoff in Settings → Manage Storage. These actions remove the selected local records and update affected monthly PDFs. The app checks available device storage to warn about low space and displays storage information to you; that information is not sent to ChargeOut. Deleting the app removes its local data, subject to normal iOS backup and restore behaviour. Deleting local records does not automatically erase exported copies or earlier device backups; manage those through the relevant destination or Apple settings."
+        ],
+        [
+            "8. Optional Pro export purchases",
+            "If your installed version offers a Pro export upgrade, payment is handled by Apple through the App Store. Apple’s privacy policy and purchase terms apply. ChargeOut does not receive your payment-card details. The app may use Apple’s purchase status and transaction information to verify access and restore the upgrade; receipt contents are not needed to make a purchase. The features included in an upgrade and its price are shown before you buy. No custom Pro purchase service is offered by ChargeOut."
+        ],
+        [
+            "9. Support requests",
+            "If you email ChargeOut, we receive your email address, message and any files you choose to attach so we can respond. Include only the information needed to explain the issue; avoid sending sensitive receipt details unless necessary. Support correspondence is kept only as needed to handle the request and applicable record-keeping obligations. You can ask about deletion by contacting us."
+        ],
+        [
+            "10. Website hosting",
+            "These pages are hosted on GitHub Pages. GitHub may process normal website request information under its privacy policy. Opening a support or privacy link in the app uses your browser. The website does not receive your saved receipt library from Receipt Rescue. These pages do not include ChargeOut advertising or analytics."
+        ],
+        [
+            "11. Changes and contact",
+            "We may update this policy when the app or its data practices change. The effective date identifies the current version. For privacy questions or requests about information you sent to support, email <a href=\"mailto:info@chargeout.net\">info@chargeout.net</a>."
+        ]
     ],
-    support: [
-      ['About Receipt Rescue', 'Receipt Rescue scans reimbursement receipts, lets you check the date and biller, records the expense reason, and shares each month as one PDF.'],
-      ['Scan a receipt', 'Tap <strong>Scan a Receipt</strong>, allow camera access and position the receipt in the document scanner. Add more pages if needed, then save the scan.'],
-      ['Check OCR suggestions', 'On-device text recognition suggests the receipt date and biller. Tap either field to correct it before saving, or use <strong>Edit Details</strong> later.'],
-      ['Add the expense reason', 'Enter a short explanation such as “Client lunch” or “Parking for meeting”. The biller and expense reason are required before saving.'],
-      ['Preview and share a monthly PDF', 'Open a month from the home screen or <strong>Previous Months</strong>. Tap <strong>Share PDF</strong> and choose a destination in the iOS share sheet.'],
-      ['Delete receipts or months', 'Open a receipt and choose <strong>Delete Receipt</strong>. Remove a month from its menu or <strong>Manage Storage</strong>. Deletion is permanent, so share any PDF you need first.'],
-      ['Storage', 'Receipt Rescue manages up to 300 MB of scans and PDFs. Open <strong>Settings → Manage Storage</strong> to review usage and remove material you no longer need.'],
-      ['Troubleshooting', '<h3>The scanner is unavailable</h3><p>Confirm camera permission in iPhone Settings. Document scanning requires a physical iPhone.</p><h3>The date or biller is incorrect</h3><p>Faded, handwritten, damaged or unusual receipts may need correction.</p><h3>Moving to another iPhone</h3><p>Receipt Rescue has no cloud sync. Share important monthly PDFs before deleting the app, resetting the iPhone or moving devices.</p>'],
-      ['Contact', 'For support, email <a href="mailto:info@chargeout.net?subject=Receipt%20Rescue%20support">info@chargeout.net</a>.']
+    "support": [
+        [
+            "About Receipt Rescue",
+            "Receipt Rescue is an iPhone app for collecting expense receipts, organising them with tags and creating PDF reports to help prepare your taxes or reimbursement claims. It does not provide tax, accounting or financial advice and does not decide whether an expense is deductible. It requires iOS 26 or later. Apple Intelligence is not required."
+        ],
+        [
+            "Scan and check a receipt",
+            "Tap <strong>Scan a Receipt</strong>, allow camera access and position the receipt in the document scanner. Add more pages if needed. Check the suggested date and biller, enter the expense reason, choose any tags and save. The biller and expense reason are required. Text recognition happens on your iPhone; correct faded, handwritten or unusual receipts manually."
+        ],
+        [
+            "Import a digital receipt",
+            "In Safari, Files or another compatible app, open the iOS share sheet and choose <strong>Receipt Rescue</strong>. You may need to enable it under More. Share a supported PDF, image or receipt link, check the details and save, then open Receipt Rescue to import the saved item. Receipt links need an internet connection and contact the original website. If a link requires a login or does not render correctly, download its PDF or image and share that file instead."
+        ],
+        [
+            "Use built-in and custom tags",
+            "Choose any of <strong>Personal, Work, Car and Property</strong>, or tap <strong>New Custom Tag</strong> to create your own. A receipt can have several tags. Open a saved receipt and choose <strong>Edit Details</strong> to change its tags, date, biller or expense reason. <strong>Settings → Manage Tags</strong> lets you add or remove custom tags. Removing a custom tag from the catalogue does not remove it from receipts already using it."
+        ],
+        [
+            "Create a report",
+            "Tap <strong>Create an Expense Report</strong> on the home screen. Choose a month, quarter, calendar year, Australian tax year or custom date range. Australian tax years run from 1 July to 30 June. Select one or more tags and choose whether receipts must match any or all selected tags. With no tags selected, both tagged and untagged receipts are included. At least one matching receipt is needed. Tap <strong>Create PDF Report</strong> to preview the report, then use Share to choose a destination. Reports contain saved receipt images; they do not calculate expense totals or tax deductions."
+        ],
+        [
+            "Preview and share a monthly PDF",
+            "Open the current month or use <strong>Previous Months</strong>. Receipt Rescue maintains the monthly PDF in date order. Tap <strong>Share PDF</strong> to choose a destination. Archiving a month keeps its receipt records on the device. PDFs shared outside the app are independent copies; later edits in Receipt Rescue do not update those copies."
+        ],
+        [
+            "Pro export upgrades",
+            "If your installed version offers a Pro export upgrade, its purchase screen explains which exports are included and shows the App Store price before purchase. Complete purchases through Apple and use the restore action offered by that version with the Apple Account used for the purchase. Availability and included features depend on your app version. Contact us if an upgrade you purchased is not recognised. Do not send payment-card details."
+        ],
+        [
+            "Seven-year storage and deletion",
+            "Receipt Rescue is designed to keep a rolling seven years of receipts, subject to available iPhone storage. There is no fixed 300 MB app limit. Open <strong>Settings → Manage Storage</strong> to review storage and older months. The app warns when device storage is low and can stop new scans when space is very low. Receipts older than seven years are removed only after you confirm. Individual receipts and entire months can also be deleted. Deletion is permanent in the app, so save any records you need first."
+        ],
+        [
+            "Backups and moving to another iPhone",
+            "Saved receipt data is eligible for normal iPhone backups. If you use iCloud Backup, check in iPhone Settings that backups are enabled, Receipt Rescue is included and a recent backup completed. Receipt Rescue does not provide live sync or an in-app restore service. Restoring a device backup may restore app data, depending on the backup and Apple’s process. A PDF export is useful for keeping readable records but is not a file you can use to restore the app’s library, edits and tags. Keep separate copies of important reports before deleting the app, resetting your iPhone or changing devices."
+        ],
+        [
+            "Troubleshooting",
+            "<h3>The scanner is unavailable</h3><p>Check camera permission in iPhone Settings. Document scanning requires a physical iPhone with a working camera.</p><h3>A report contains no receipts</h3><p>Check the receipt dates, reporting period and selected tags. Matching all selected tags is more restrictive than matching any.</p><h3>A shared receipt has not appeared</h3><p>Open Receipt Rescue after saving through the share extension. If the import needs attention, share the original file or link again.</p><h3>A PDF needs rebuilding</h3><p>Keep the app open and reopen the month. If Rebuild PDF is offered, use it. Keep the original scans until you have checked the resulting report.</p><h3>Storage is low</h3><p>Free space on your iPhone or share and remove records you no longer need. Check your backup before deleting important records.</p>"
+        ],
+        [
+            "Privacy and contact",
+            "Read the <a href=\"../privacy/\">Receipt Rescue Privacy Policy</a>. For help, email <a href=\"mailto:info@chargeout.net?subject=Receipt%20Rescue%20support\">info@chargeout.net</a> with your app version, iOS version and the steps that led to the issue. Remove sensitive details from screenshots or receipts before sending them."
+        ]
     ]
-  },
+},
   'avanti-tracker': {
     name: 'Avanti Tracker',
     icon: '/assets/icons/avanti-tracker.png',

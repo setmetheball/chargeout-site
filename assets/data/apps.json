@@ -9,7 +9,7 @@
   {
     "name": "Receipt Rescue",
     "slug": "receipt-rescue",
-    "tagline": "Receipt scanning and monthly PDF reports",
+    "tagline": "Receipt tags and custom PDF reports",
     "icon": "/assets/icons/receipt-rescue.png",
     "url": "/apps/receipt-rescue/"
   },
