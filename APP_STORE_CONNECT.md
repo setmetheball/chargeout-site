@@ -64,28 +64,28 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 > Note Buddy has no ChargeOut account, advertising, analytics or tracking. Your notes sync through your private iCloud database and are not available to ChargeOut. Private Cloud Compute is not enabled in current builds.
 >
 
-Keep the initial listing focused on the current app. Add the following paragraph only when the StoreKit purchase is implemented, restorable and ready to submit with the version:
+The release listing should describe the complete three-note trial and unlimited-note upgrade. Verify the purchase is configured, restorable and ready to submit with the version:
 
-> Base note-taking is free forever. A one-time Note Buddy Pro purchase unlocks summaries, action-item finding, Reminders integration, attachments with text reading and the asterisk action-item shortcut. Final price and availability are shown by the App Store.
+> Every feature is included for your first three notes. A one-time AU$6.99 Australian Note Buddy Pro purchase unlocks unlimited notes, with no subscription. Start a line or end a paragraph with a handwritten or typed asterisk to automatically flag a to-do. Apple Intelligence features require a compatible device with Apple Intelligence enabled.
 
 The iPhone Duo wording is deliberately concrete and limited to layouts implemented by the app. Archive the release with Xcode 27.1 or later so the hinge-aware code path is present in the submitted build.
 
 ## Planned Note Buddy Pro purchase
 
-Create this only after the StoreKit implementation and entitlement restoration are working in the app.
+Configure this purchase for the release model and verify StoreKit purchase and entitlement restoration before submission.
 
 | Field | Draft |
 | --- | --- |
 | Type | Non-Consumable |
 | Reference name | `Note Buddy Pro` |
 | Display name | `Note Buddy Pro` |
-| Description | `Unlock summaries, action items, Reminders integration, photos and files, text reading and asterisk-marked tasks.` |
+| Description | `Unlimited notes. One-time purchase, no subscription.` |
 | Proposed product ID | `com.richardhopwood.NoteBuddy.pro` |
-| Planned Australian price | AU$7.99 one time |
+| Planned Australian price | AU$6.99 one time |
 
 Product IDs cannot be changed after creation. Confirm the identifier before saving it in App Store Connect.
 
-## Version setup before the purchase exists
+## Version setup for the freemium release
 
 - App price: **Free**.
 - Availability: all countries and regions unless a deliberate launch restriction is chosen.
@@ -94,11 +94,11 @@ Product IDs cannot be changed after creation. Confirm the identifier before savi
 - Game Center: **No**.
 - Content rights: the app does not contain licensed third-party catalogue content.
 - Age rating: answer **None** for mature content, gambling, web access, social, messaging, advertising and user-to-user content. Personal notes are not published to other users.
-- Do not create an in-app purchase or add purchase copy to the live App Store description yet.
+- Configure the non-consumable purchase and submit it with the app version before publishing purchase copy to the App Store listing.
 
 ### App Review notes draft
 
-> Note Buddy does not require an account or sign-in. Calendar and Reminders access are optional; core note creation works if either permission is declined. On iPhone and iPad, create a note and use the pencil/keyboard controls to add handwritten and typed sections. Use the sparkle/action-items control to run handwriting recognition and find action items. Apple Intelligence results require supported hardware with Apple Intelligence enabled; otherwise the app uses on-device marked-line matching. On Mac, handwriting is view-only and typed notes remain editable. Notes sync through the user’s private iCloud database. There is no developer-operated backend, analytics, advertising or tracking. No in-app purchase is included in this build.
+> Note Buddy does not require an account or sign-in. Calendar and Reminders access are optional; core note creation works if either permission is declined. On iPhone and iPad, create a note and use the pencil/keyboard controls to add handwritten and typed sections. Use the sparkle/action-items control to run handwriting recognition and find action items. Apple Intelligence results require supported hardware with Apple Intelligence enabled; otherwise the app uses on-device marked-line matching. On Mac, handwriting is view-only and typed notes remain editable. Notes sync through the user’s private iCloud database. There is no developer-operated backend, analytics, advertising or tracking. Every feature is available for three free notes. Creating a fourth note prompts the one-time Note Buddy Pro upgrade for unlimited notes; purchase and restoration are available in Settings.
 
 App Review contact details still need a phone number supplied by the account holder. Use `info@chargeout.net` for the review email if that inbox is monitored during review.
 
@@ -122,11 +122,11 @@ Recheck these answers if analytics, crash-reporting SDKs, a backend, Private Clo
 
 ### Required before the freemium listing is submitted
 
-- Implement StoreKit 2 purchase, entitlement checking and **Restore Purchases**. The current source has no StoreKit code and does not yet gate Pro features.
-- Keep all base note-taking free and unlimited; gate only the advertised Pro features.
+- Verify StoreKit 2 purchase, entitlement checking and **Restore Purchases** in the release build.
+- Include all features in the three-note free allowance; gate only creation of further notes. Existing notes remain editable, synced and shareable without Pro.
 - Test purchase success, cancellation, pending approval, offline launch, Family Sharing choice and entitlement restoration on a second device.
 - Create the non-consumable product, add its App Review screenshot and submit it with the app version.
-- Deploy SwiftData/CloudKit schema version 2 from Development to Production before TestFlight or App Store use.
+- Deploy the current SwiftData/CloudKit schema from Development to Production before TestFlight or App Store use.
 - Confirm iCloud, push, Calendar, Reminders and camera capabilities in the distribution profile for both iOS/iPadOS and macOS variants.
 - Keep the Private Cloud Compute entitlement and compilation flag absent unless Apple approves access and the privacy copy is updated.
 

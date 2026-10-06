@@ -15,7 +15,7 @@ The site is designed for GitHub Pages at `https://chargeout.net` and needs no bu
 
 The four 1024 × 1024 PNG files in `assets/icons` are local copies of the current app icons from the source Xcode projects. The website has no runtime dependency on those projects. `assets/data/apps.json` is the compact app manifest to update when another ChargeOut app is added.
 
-Note Buddy’s public copy reflects the current app source: private CloudKit sync, optional Calendar and Reminders access, on-device handwriting and attachment recognition, and on-device Apple Intelligence. Private Cloud Compute is not enabled. The advertised AU$7.99 one-time Pro purchase is planned launch pricing and must not be presented as available until StoreKit entitlement handling is implemented and the purchase is approved in App Store Connect.
+Note Buddy’s public copy reflects the current app source: private CloudKit sync, optional Calendar and Reminders access, on-device handwriting and attachment recognition, and on-device Apple Intelligence. Private Cloud Compute is not enabled. The site presents Note Buddy to iPhone Duo owners. The release model includes every feature for three free notes, followed by a one-time AU$6.99 Australian Pro upgrade for unlimited notes. Starting a line or ending a paragraph with a handwritten or typed asterisk automatically flags a to-do. The website describes App Store release pricing without claiming the app is already available to purchase.
 
 ## Local preview
 
