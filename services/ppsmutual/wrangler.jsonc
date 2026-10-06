@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ppsmutual-registration",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-06",
+  "workers_dev": true,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": {
+    "REGISTRATION_OPEN": "false",
+    "ALLOWED_ORIGINS": "https://chargeout.net,https://www.chargeout.net",
+    "EMAIL_FROM": "PPS Mutual Adviser Connect <info@chargeout.net>",
+    "REPLY_TO": "info@chargeout.net",
+    "SITE_URL": "https://chargeout.net/ppsmutual"
+  },
+  "d1_databases": [{ "binding": "DB", "database_name": "ppsmutual-registration", "database_id": "REPLACE_WITH_CREATED_D1_DATABASE_ID", "migrations_dir": "migrations" }]
+}

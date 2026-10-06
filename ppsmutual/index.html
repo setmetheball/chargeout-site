@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Join the PPS Mutual adviser community for Adviser Connect 2026 in Brisbane, Melbourne or Perth.">
+  <title>Adviser Connect 2026 | PPS Mutual</title>
+  <link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#register">Skip to registration</a>
+  <div id="preview-banner" class="preview-banner" hidden>DESIGN PREVIEW <span>Try the registration journey. No details are saved and no emails are sent.</span></div>
+  <header class="header"><div class="wrap header-inner">
+    <a href="./" aria-label="Adviser Connect home"><img class="logo" src="./assets/pps-logo.jpg" alt="PPS Mutual — For Professionals" width="89" height="90"></a>
+    <span class="header-title">ADVISER CONNECT <b>2026</b></span>
+    <a class="nav-link" href="#register">Choose your city <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main>
+    <section class="hero"><div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>ADVISER<br>CONNECT <strong>2026</strong></h1>
+        <p class="hero-lead">Insights, Strategy &amp; Celebration</p>
+        <p>Join us in Brisbane, Melbourne or Perth for Adviser Connect 2026, an opportunity to connect with fellow advisers, hear the latest from PPS Mutual, and celebrate the year with our adviser community.</p>
+        <a class="button gold" href="#register">Register <span aria-hidden="true">↓</span></a>
+        <div class="hero-meta"><span>NOVEMBER 2026</span><span>BRISBANE · MELBOURNE · PERTH</span></div>
+      </div>
+      <div class="hero-art"><div class="art-label"><span>ADVISER CONNECT 2026</span><span class="year">’26</span></div><img src="./assets/professionals.png" alt="PPS Mutual illustration of a connected community of professionals" width="2352" height="1334"></div>
+    </div></section>
+    <section class="intro wrap" aria-labelledby="intro-title"><p class="eyebrow">ADVISER CONNECT 2026</p><div class="intro-grid"><h2 id="intro-title">Insights, Strategy<br>&amp; Celebration</h2><div><p>The session will include a brief business update, profit share insights, and an overview of key focus areas for the year ahead.</p><p>Following the presentation, join us for lunch and the opportunity to celebrate the year with the PPS Mutual team and your adviser peers.</p></div></div></section>
+    <section id="register" class="registration-section"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">ADVISER CONNECT 2026</p><h2>Registration</h2></div><p>Choose your city and enter your registration details.</p></div>
+      <div class="registration-grid"><div class="form-card">
+        <form id="registration-form">
+          <fieldset class="city-fieldset"><legend><span class="step-number">01</span> Choose your city</legend><div id="city-options" class="city-options"></div></fieldset>
+          <div id="event-details" class="event-details" aria-live="polite">Select a city to see the event details.</div>
+          <fieldset data-delegate-fields><legend><span class="step-number">02</span> Your details</legend><p class="field-note">Required fields are marked with an asterisk.</p>
+            <div class="two-col"><label>First name *<input name="firstName" autocomplete="given-name" maxlength="80" required></label><label>Last name *<input name="lastName" autocomplete="family-name" maxlength="80" required></label></div>
+            <label>Email address *<input name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@yourpractice.com.au"></label>
+            <label>Practice / organisation *<input name="organisation" autocomplete="organization" maxlength="160" required></label>
+            <label>Mobile number <span class="optional">(optional)</span><input name="phone" type="tel" autocomplete="tel" maxlength="30"></label>
+          </fieldset>
+          <fieldset data-delegate-fields><legend><span class="step-number">03</span> Dietary requirements</legend>
+            <label>Dietary requirements<select name="dietary" id="dietary"><option value="none">No dietary requirements</option><option value="vegetarian">Vegetarian</option><option value="vegan">Vegan</option><option value="gluten-free">Gluten free</option><option value="dairy-free">Dairy free</option><option value="halal">Halal</option><option value="other">Other / multiple requirements</option></select></label>
+            <label>Allergies or anything else we should know <span class="optional">(optional)</span><textarea name="dietaryNotes" maxlength="1000" rows="3" placeholder="For example: a nut allergy, or more than one dietary requirement."></textarea></label>
+          </fieldset>
+          <label class="check" data-delegate-fields><input name="consent" type="checkbox" required><span>I agree that my details can be used to organise this event and send my confirmation and reminder. Dietary information may be shared with the venue for catering. <a href="./privacy.html">How we use your details</a>.</span></label>
+          <div class="honey" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div id="turnstile"></div><p id="form-status" role="status" aria-live="polite"></p>
+          <button id="submit-button" class="button navy" type="submit" disabled>Loading event details… <span aria-hidden="true">→</span></button>
+          <p class="form-footnote" id="form-footnote">Your registration is complete only when you see your confirmation.</p>
+        </form>
+        <section id="success" class="success" hidden tabindex="-1"><div class="success-mark" aria-hidden="true">✓</div><p class="eyebrow" id="success-eyebrow">YOU’RE ON THE LIST</p><h2 id="success-title">We’ll see you there.</h2><p id="success-message"></p><div id="success-details" class="event-details"></div><a id="calendar-link" class="button navy" hidden>Add to calendar <span aria-hidden="true">↗</span></a><p id="success-reference" class="field-note"></p><a href="./">Back to the invitation</a></section>
+      </div>
+      <aside class="programme"><p class="eyebrow">ADVISER CONNECT 2026</p><h3>Highlights</h3><ol><li><span>01</span><div>2026 Year in Review</div></li><li><span>02</span><div>PPS Mutual Business &amp; Profit Share Update</div></li><li><span>03</span><div>Key Priorities for 2027</div></li><li><span>04</span><div>Mike Jackson: The Psychology of High Performance</div></li><li><span>05</span><div>Lunch &amp; Networking</div></li></ol><div class="invitation-note">We look forward to seeing you there and thanking you for your continued support.</div></aside>
+      </div>
+    </div></section>
+    <section class="speaker wrap"><div class="speaker-stamp" aria-hidden="true"><span>MIKE JACKSON</span><b>THE PSYCHOLOGY<br>OF HIGH<br>PERFORMANCE</b></div><div><p class="eyebrow">OUR GUEST SPEAKER</p><h2>Mike Jackson</h2><h3>The Psychology of High Performance</h3><p>We are also pleased to welcome Mike Jackson, presenting The Psychology of High Performance. Drawing on insights from psychology and elite performance, Mike will explore the mindset, habits and behaviours that help top-performing advisers achieve sustained success while maintaining balance and wellbeing.</p></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>PPS MUTUAL <span class="footer-sub">FOR PROFESSIONALS</span></span><span>Adviser Connect 2026 · <a href="./privacy.html">Event privacy</a></span></div></footer>
+</body></html>

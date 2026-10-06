@@ -1,0 +1,46 @@
+{
+  "title": "Adviser Connect 2026",
+  "registrationOpen": false,
+  "apiBase": "",
+  "turnstileSiteKey": "",
+  "replyTo": "info@chargeout.net",
+  "cities": [
+    {
+      "id": "brisbane",
+      "name": "Brisbane",
+      "timezone": "Australia/Brisbane",
+      "dateLabel": "Friday 13 November 2026",
+      "venue": "Port Office Hotel",
+      "address": "Edward Street, Brisbane",
+      "timeLabel": "12:15 pm \u00b7 Brisbane time",
+      "start": "2026-11-13T12:15:00+10:00",
+      "end": null,
+      "registrationUrl": null
+    },
+    {
+      "id": "melbourne",
+      "name": "Melbourne",
+      "timezone": "Australia/Melbourne",
+      "dateLabel": "November 2026 \u00b7 date to be confirmed",
+      "venue": "Venue to be confirmed",
+      "address": "",
+      "timeLabel": "Lunch session \u00b7 time to be confirmed",
+      "start": null,
+      "end": null,
+      "registrationUrl": null
+    },
+    {
+      "id": "perth",
+      "name": "Perth",
+      "timezone": "Australia/Perth",
+      "dateLabel": "November 2026 \u00b7 date to be confirmed",
+      "venue": "Venue to be confirmed",
+      "address": "",
+      "timeLabel": "Lunch session \u00b7 time to be confirmed",
+      "start": null,
+      "end": null,
+      "registrationUrl": null
+    }
+  ],
+  "registrationProvider": "custom"
+}
