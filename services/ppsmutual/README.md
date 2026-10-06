@@ -2,7 +2,15 @@
 
 The invitation lives at `/ppsmutual/` in the existing ChargeOut GitHub Pages site. A Cloudflare Worker stores registrations in D1 and sends email through Resend. Hover continues receiving and forwarding `info@chargeout.net`; the new sender does not replace its MX records.
 
-## Current state
+## Current simplified workflow
+
+The owner now wants registration details emailed only to the relevant state manager. The team handles delegate confirmations and reminders in Outlook. The page sets `confirmationMode` to `manual` and acknowledges receipt instead of promising an automatically confirmed place. The reference Worker defaults to `NOTIFICATION_MODE=organiser-only`, which queues only the state alert. Set `NOTIFICATION_MODE=full` and change the page mode only if the owner later requests automated delegate messages.
+
+No delivery service has been activated; the public form remains closed. A hosted form-to-email relay is an alternative to operating the Worker or Mac mini. FormSubmit supports recipient activation and opaque endpoint aliases, but choosing a provider, activating the state recipients, reviewing its processing of submitted dietary/contact information, and testing delivery are still needed. Do not expose named manager addresses in public form configuration and do not open registration before alerts reliably arrive.
+
+The Outlook email designs live outside this public repository in the Air's `MJ Lunch/Outlook Templates` folder, with Brisbane and reusable city versions. No actual manager addresses or delegate recipients are included in them.
+
+## Original implementation reference
 
 - The invitation uses the supplied approved RTF wording verbatim, substituting only the city placeholder and confirmed logistics. The branded invitation, city selection, delegate form, dietary fields, confirmation screen, calendar download and organiser dashboard are implemented.
 - Brisbane: Friday 13 November 2026, 12:15 pm, Port Office Hotel, Edward Street, Brisbane. End time has not been supplied; the calendar entry contains the start time only.

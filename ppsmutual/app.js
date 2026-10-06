@@ -24,7 +24,7 @@ function setButton() {
   const ready = preview || (config.registrationOpen && config.apiBase && config.turnstileSiteKey && selectedCity?.start && new Date(selectedCity.start) > new Date());
   $('submit-button').disabled = !ready;
   $('submit-button').textContent = preview ? 'Preview my registration →' : ready ? 'Register for the lunch →' : selectedCity && !selectedCity.start ? 'Event details coming soon' : 'Registrations opening soon';
-  $('form-footnote').textContent = preview ? 'Preview only. Your details will not be saved or emailed.' : ready ? 'We’ll email your confirmation and a reminder before the lunch.' : 'The invitation is ready. Registration will open once the final arrangements are in place.';
+  $('form-footnote').textContent = preview ? 'Preview only. Your details will not be saved or emailed.' : ready ? (config.confirmationMode === 'manual' ? 'Your state team will email your confirmation.' : 'We’ll email your confirmation and a reminder before the lunch.') : 'The invitation is ready. Registration will open once the final arrangements are in place.';
 }
 function calendar(city) {
   const esc = (s) => s.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
@@ -63,7 +63,7 @@ $('registration-form').addEventListener('submit', async (event) => {
   if (!form.reportValidity()) return;
   if (!preview && !turnstileToken) { $('form-status').textContent='Please complete the security check before registering.'; return; }
   const data = Object.fromEntries(new FormData(form)); data.consent = data.consent === 'on'; data.turnstileToken=turnstileToken;
-  $('submit-button').disabled=true; $('submit-button').textContent='Confirming your registration…'; $('form-status').textContent='';
+  $('submit-button').disabled=true; $('submit-button').textContent='Submitting your registration…'; $('form-status').textContent='';
   try {
     let result;
     if (preview) result={reference:'PREVIEW', event:selectedCity};
@@ -74,12 +74,12 @@ $('registration-form').addEventListener('submit', async (event) => {
     }
     form.hidden=true; $('success').hidden=false;
     const city=result.event || selectedCity;
-    $('success-eyebrow').textContent=preview ? 'REGISTRATION PREVIEW' : 'YOU’RE ON THE LIST';
-    $('success-title').textContent=preview ? 'Here’s your confirmation.' : 'We’ll see you there.';
-    $('success-message').textContent=preview ? `This is how your confirmation will look, ${data.firstName}. This preview has not registered you or sent an email.` : `Thanks, ${data.firstName}. Your place in ${city.name} is confirmed. Your confirmation email is queued for ${data.email}; we’ll also send a reminder before the lunch.`;
+    $('success-eyebrow').textContent=preview ? 'REGISTRATION PREVIEW' : config.confirmationMode === 'manual' ? 'REGISTRATION RECEIVED' : 'YOU’RE ON THE LIST';
+    $('success-title').textContent=config.confirmationMode === 'manual' ? 'Registration received.' : preview ? 'Here’s your confirmation.' : 'We’ll see you there.';
+    $('success-message').textContent=config.confirmationMode === 'manual' ? (preview ? `This previews the acknowledgement after submission, ${data.firstName}. Your ${city.name} team would receive your details and email your confirmation separately. No registration has been saved and no email has been sent in this preview.` : `Thanks, ${data.firstName}. Your registration details for ${city.name} have been received. Your state team will email your confirmation separately.`) : preview ? `This is how your confirmation will look, ${data.firstName}. This preview has not registered you or sent an email.` : `Thanks, ${data.firstName}. Your place in ${city.name} is confirmed. Your confirmation email is queued for ${data.email}; we’ll also send a reminder before the lunch.`;
     details($('success-details'),city);
-    if (city.start) { $('calendar-link').href=calendar(city); $('calendar-link').download=`adviser-connect-${city.id}.ics`; $('calendar-link').hidden=false; }
-    $('success-reference').textContent=preview ? 'Preview complete · no registration saved.' : `Registration reference: ${result.reference}. To change your details, reply to your confirmation email or contact ${config.replyTo}.`;
+    if (city.start && config.confirmationMode !== 'manual') { $('calendar-link').href=calendar(city); $('calendar-link').download=`adviser-connect-${city.id}.ics`; $('calendar-link').hidden=false; }
+    $('success-reference').textContent=preview ? 'Preview complete · no registration saved.' : `Registration reference: ${result.reference}. To change your details, contact your state team or ${config.replyTo}.`;
     form.reset(); turnstileToken=''; $('success').focus();
   } catch (error) {
     $('form-status').textContent=error.message || 'We could not confirm your registration. Please try again.';

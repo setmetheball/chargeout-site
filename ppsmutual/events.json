@@ -42,5 +42,6 @@
       "registrationUrl": null
     }
   ],
-  "registrationProvider": "custom"
+  "registrationProvider": "custom",
+  "confirmationMode": "manual"
 }

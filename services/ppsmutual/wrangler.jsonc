@@ -7,6 +7,7 @@
   "triggers": { "crons": ["*/5 * * * *"] },
   "vars": {
     "REGISTRATION_OPEN": "false",
+    "NOTIFICATION_MODE": "organiser-only",
     "ALLOWED_ORIGINS": "https://chargeout.net,https://www.chargeout.net",
     "EMAIL_FROM": "PPS Mutual Adviser Connect <info@chargeout.net>",
     "REPLY_TO": "info@chargeout.net",
