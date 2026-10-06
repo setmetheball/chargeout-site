@@ -32,21 +32,6 @@
       "meal": "lunch"
     },
     {
-      "id": "perth",
-      "name": "Perth",
-      "timezone": "Australia/Perth",
-      "dateLabel": "Thursday 12 November 2026",
-      "venue": "Private Dining Room, Frasers Restaurant",
-      "address": "60 Fraser Avenue, Kings Park, West Perth",
-      "timeLabel": "7:45 am arrival \u00b7 8:00 am start \u00b7 10:30 am finish \u00b7 Perth time",
-      "start": "2026-11-12T08:00:00+08:00",
-      "end": "2026-11-12T10:30:00+08:00",
-      "registrationUrl": null,
-      "meal": "breakfast",
-      "inclusions": "Hot breakfast included",
-      "arrival": "2026-11-12T07:45:00+08:00"
-    },
-    {
       "id": "sydney",
       "name": "Sydney",
       "timezone": "Australia/Sydney",
@@ -57,7 +42,8 @@
       "start": "2026-11-17T12:00:00+11:00",
       "end": "2026-11-17T14:00:00+11:00",
       "registrationUrl": null,
-      "meal": "lunch"
+      "meal": "lunch",
+      "capacity": 30
     }
   ],
   "registrationProvider": "custom",
