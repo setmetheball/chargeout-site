@@ -12,9 +12,9 @@
       "dateLabel": "Friday 13 November 2026",
       "venue": "Port Office Hotel",
       "address": "Edward Street, Brisbane",
-      "timeLabel": "12:15 pm \u00b7 Brisbane time",
-      "start": "2026-11-13T12:15:00+10:00",
-      "end": null,
+      "timeLabel": "12:30\u20132:30 pm \u00b7 Brisbane time",
+      "start": "2026-11-13T12:30:00+10:00",
+      "end": "2026-11-13T14:30:00+10:00",
       "registrationUrl": null,
       "meal": "lunch"
     },
