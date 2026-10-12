@@ -29,7 +29,7 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 
 ### Promotional text
 
-> Handwrite or type on one private page, find action items, and make the most of iPhone Duo with layouts for its outer, inner and laptop-style displays.
+> All features and unlimited notes are free. Handwrite, type and find action items on iPhone, iPad and Mac, with optional beer tips to support development.
 
 ### Description
 
@@ -64,28 +64,24 @@ The Marketing URL is optional. The Support URL and Privacy Policy URL are the ap
 > Note Buddy has no ChargeOut account, advertising, analytics or tracking. Your notes sync through your private iCloud database and are not available to ChargeOut. Private Cloud Compute is not enabled in current builds.
 >
 
-The release listing should describe the complete three-note trial and unlimited-note upgrade. Verify the purchase is configured, restorable and ready to submit with the version:
+The release listing should describe free access to every feature and optional support:
 
-> Every feature is included for your first three notes. A one-time AU$6.99 Australian Note Buddy Pro purchase unlocks unlimited notes, with no subscription. Start a line or end a paragraph with a handwritten or typed asterisk to automatically flag a to-do. Apple Intelligence features require a compatible device with Apple Intelligence enabled.
+> Every feature and unlimited notes are free. If Note Buddy is useful to you, you can shout me a beer, or part of one, to help cover development costs. Tips are optional, unlock nothing and do not create a subscription. Start a line or end a paragraph with a handwritten or typed asterisk to automatically flag a to-do. Apple Intelligence features require a compatible device with Apple Intelligence enabled.
 
 The iPhone Duo wording is deliberately concrete and limited to layouts implemented by the app. Archive the release with Xcode 27.1 or later so the hinge-aware code path is present in the submitted build.
 
-## Planned Note Buddy Pro purchase
+## Optional Note Buddy tip products
 
-Configure this purchase for the release model and verify StoreKit purchase and entitlement restoration before submission.
+Each product is a repeatable consumable tip that unlocks nothing. Match the current app source and confirm localised pricing in App Store Connect. Do not attach the superseded Pro upgrade to the new release.
 
-| Field | Draft |
-| --- | --- |
-| Type | Non-Consumable |
-| Reference name | `Note Buddy Pro` |
-| Display name | `Note Buddy Pro` |
-| Description | `Unlimited notes. One-time purchase, no subscription.` |
-| Proposed product ID | `com.richardhopwood.NoteBuddy.pro` |
-| Planned Australian price | AU$6.99 one time |
+| Tip | Product ID | Type |
+| --- | --- | --- |
+| A sip | `com.richardhopwood.NoteBuddy.tip.sip` | Consumable |
+| A swig | `com.richardhopwood.NoteBuddy.tip.swig` | Consumable |
+| Half a beer | `com.richardhopwood.NoteBuddy.tip.half` | Consumable |
+| A beer | `com.richardhopwood.NoteBuddy.tip.beer` | Consumable |
 
-Product IDs cannot be changed after creation. Confirm the identifier before saving it in App Store Connect.
-
-## Version setup for the freemium release
+## Version setup for the free-with-tips release
 
 - App price: **Free**.
 - Availability: all countries and regions unless a deliberate launch restriction is chosen.
@@ -93,12 +89,12 @@ Product IDs cannot be changed after creation. Confirm the identifier before savi
 - Sign-in required: **No** on both iOS and macOS.
 - Game Center: **No**.
 - Content rights: the app does not contain licensed third-party catalogue content.
-- Age rating: answer **None** for mature content, gambling, web access, social, messaging, advertising and user-to-user content. Personal notes are not published to other users.
-- Configure the non-consumable purchase and submit it with the app version before publishing purchase copy to the App Store listing.
+- Age rating: the current app’s release checklist must account for the beer references. Personal notes are not published to other users.
+- Configure the optional consumable tips and verify them against the current app project before submitting the app and purchases. This website update does not change App Store Connect.
 
 ### App Review notes draft
 
-> Note Buddy does not require an account or sign-in. Calendar and Reminders access are optional; core note creation works if either permission is declined. On iPhone and iPad, create a note and use the pencil/keyboard controls to add handwritten and typed sections. Use the sparkle/action-items control to run handwriting recognition and find action items. Apple Intelligence results require supported hardware with Apple Intelligence enabled; otherwise the app uses on-device marked-line matching. On Mac, handwriting is view-only and typed notes remain editable. Notes sync through the user’s private iCloud database. There is no developer-operated backend, analytics, advertising or tracking. Every feature is available for three free notes. Creating a fourth note prompts the one-time Note Buddy Pro upgrade for unlimited notes; purchase and restoration are available in Settings.
+> Note Buddy does not require an account or sign-in. Calendar and Reminders access are optional; core note creation works if either permission is declined. On iPhone and iPad, create a note and use the pencil/keyboard controls to add handwritten and typed sections. Use the sparkle/action-items control to run handwriting recognition and find action items. Apple Intelligence results require supported hardware with Apple Intelligence enabled; otherwise the app uses on-device marked-line matching. On Mac, handwriting is view-only and typed notes remain editable. Notes sync through the user’s private iCloud database. There is no developer-operated backend, analytics, advertising or tracking. All features and unlimited notes are free. Settings → Tip Jar → Buy Me a Beer offers optional consumable tips towards development costs. A tip unlocks nothing, and cancelled, pending or failed purchases never limit app access.
 
 App Review contact details still need a phone number supplied by the account holder. Use `info@chargeout.net` for the review email if that inbox is monitored during review.
 
@@ -120,12 +116,12 @@ Recheck these answers if analytics, crash-reporting SDKs, a backend, Private Clo
 
 ## Submission blockers and checks
 
-### Required before the freemium listing is submitted
+### Required before the free-with-tips listing is submitted
 
-- Verify StoreKit 2 purchase, entitlement checking and **Restore Purchases** in the release build.
-- Include all features in the three-note free allowance; gate only creation of further notes. Existing notes remain editable, synced and shareable without Pro.
-- Test purchase success, cancellation, pending approval, offline launch, Family Sharing choice and entitlement restoration on a second device.
-- Create the non-consumable product, add its App Review screenshot and submit it with the app version.
+- Verify optional StoreKit 2 consumable tips in the release build. Tips have no feature entitlement or balance to restore.
+- Confirm unlimited note creation and every feature remain available without tipping, including when the App Store is unavailable.
+- Test repeat tips, cancellation, pending approval, interrupted transactions and offline app access. Verify supporter acknowledgements across devices.
+- Configure the four consumable products, add the tip-jar review screenshot and prepare them with the app version.
 - Deploy the current SwiftData/CloudKit schema from Development to Production before TestFlight or App Store use.
 - Confirm iCloud, push, Calendar, Reminders and camera capabilities in the distribution profile for both iOS/iPadOS and macOS variants.
 - Keep the Private Cloud Compute entitlement and compilation flag absent unless Apple approves access and the privacy copy is updated.
@@ -133,8 +129,8 @@ Recheck these answers if analytics, crash-reporting SDKs, a backend, Private Clo
 ### Listing and review material
 
 - Upload screenshots for each device family offered by the universal record. Show a real note, mixed handwriting and typing, the action-items panel, an attachment and the Mac layout without private data.
-- Record App Review notes explaining that Calendar and Reminders are optional, where Note Buddy Pro can be purchased and restored, and how reviewers can reach the action-item feature.
-- Confirm the age-rating questionnaire reflects a general productivity app with no account, social features, user-to-user sharing or built-in web content.
+- Record App Review notes explaining that Calendar and Reminders are optional, where the optional tip jar can be found, and how reviewers can reach the action-item feature.
+- Confirm the age-rating questionnaire reflects the current app, including the beer-tip references, with no account, social features, user-to-user sharing or built-in web content.
 - Complete export-compliance questions for Apple’s standard iCloud/network encryption and add the appropriate non-exempt-encryption declaration to the app if confirmed by archive validation.
 - Archive and validate both destinations, review Xcode’s privacy-manifest warnings and resolve every signing or entitlement warning before upload.
 - Test iCloud sync using production/TestFlight accounts, not only development builds.

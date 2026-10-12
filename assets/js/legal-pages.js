@@ -2,7 +2,7 @@ const legalPages = {
   'work-travel-logbook': {
     name: 'Work Travel Logbook',
     icon: '/assets/icons/work-travel-logbook.png',
-    privacyDate: '8 July 2026',
+    privacyDate: '13 October 2026',
     privacy: [
       ['1. Overview', '<strong>Work Travel Logbook does not collect personal information from users. Travel log entries are stored locally on the user’s device. The developer does not receive, store, sell or share user data.</strong><p>This policy explains how Work Travel Logbook handles information when you use the app.</p>'],
       ['2. Information stored by the app', 'The app stores travel log entries locally on the user’s device. These entries may include dates, times, odometer readings, reasons for travel, kilometres travelled, reimbursement rates and calculated reimbursement amounts.'],
@@ -12,7 +12,8 @@ const legalPages = {
       ['6. Internet access', 'Work Travel Logbook is designed to work offline. The app does not require internet access to record trips, calculate totals or create CSV exports.'],
       ['7. Account creation', 'The app does not require login and does not require users to create an account.'],
       ['8. Data deletion', 'Deleting the app removes locally stored app data, subject to normal iOS backup and restore behaviour. Users should export any CSV files they wish to keep before deleting the app.'],
-      ['9. Contact', 'For privacy questions, email <a href="mailto:info@chargeout.net">info@chargeout.net</a>.']
+      ["9. Optional tips", "<p>All features are free. Optional tips help cover development costs and do not unlock features. Apple processes each separate one-time payment through the App Store. ChargeOut does not receive your payment-card details or use a developer purchase server. The app verifies transactions and stores tip acknowledgements, invitation history, opt-out preferences and usage counts locally. Available Apple purchase history may suppress invitations after reinstalling. These settings are not sent to ChargeOut and do not contain a balance or paid feature entitlement to restore. Tipping may require internet access; journeys, vehicles and CSV exports remain available without it.</p>"],
+      ['10. Contact', 'For privacy questions, email <a href="mailto:info@chargeout.net">info@chargeout.net</a>.']
     ],
     support: [
       ['About the app', 'Work Travel Logbook is a simple iPhone app for recording work-related trips, odometer readings, kilometres travelled and monthly reimbursement totals.'],
@@ -21,6 +22,7 @@ const legalPages = {
       ['Export a monthly CSV', 'Select the month you want to export, then tap <strong>Export Monthly CSV</strong>. At least one completed trip is required. The app creates a local CSV and opens the iOS share sheet.'],
       ['Change the reimbursement rate', 'Set the appropriate rate when starting a trip. The rate saved with the trip is used for that trip’s mileage claim calculation.'],
       ['Edit or delete entries', 'To delete a completed entry, swipe left on the trip and choose delete. If editing is available in your installed version, open the trip to update its details.'],
+      ["Free features and optional support", "<p>All features are free, including multiple vehicles, journey widgets and unlimited CSV exports. Tips do not unlock anything, and there is no subscription.</p><p>Open <strong>Settings → Buy me a beer, or part of one</strong> to leave an optional tip towards development costs. The App Store shows your local price before confirmation. Each tip is a separate one-time payment and can be repeated. Automatic invitations can be dismissed and stop after a verified tip. App Store connection problems do not affect journeys, vehicles or exports.</p>"],
       ['Troubleshooting', '<h3>Incorrect reimbursement total</h3><p>Check the start and end odometer readings and the rate saved with the trip.</p><h3>Missing entries</h3><p>Check the selected month. A trip appears in monthly totals after it is finished.</p><h3>Reinstalling the app</h3><p>Work Travel Logbook stores data locally. Export important CSV files before deleting or reinstalling the app.</p>'],
       ['Contact', 'For support, email <a href="mailto:info@chargeout.net?subject=Work%20Travel%20Logbook%20support">info@chargeout.net</a>.']
     ]
@@ -28,7 +30,7 @@ const legalPages = {
   'receipt-rescue': {
     "name": "Receipt Rescue",
     "icon": "/assets/icons/receipt-rescue.png",
-    "privacyDate": "1 October 2026",
+    "privacyDate": "13 October 2026",
     "privacy": [
         [
             "1. Overview",
@@ -36,7 +38,7 @@ const legalPages = {
         ],
         [
             "2. Information stored by the app",
-            "The app stores receipt images, recognised text, dates, biller or merchant names, expense reasons, built-in and custom tags, scan timestamps, optional user-confirmed AUD amounts, thumbnails and monthly PDF files. It also stores whether your free PDF export has completed. Reports for a month, quarter, calendar year, Australian tax year or custom date range are generated on your device. App settings and custom tags are stored locally; a shared inbox passes imported receipts from the share extension to the main app on the same iPhone."
+            "The app stores receipt images, recognised text, dates, biller or merchant names, expense reasons, built-in and custom tags, scan timestamps, optional user-confirmed AUD amounts, thumbnails and monthly PDF files. It also stores local usage counts, tip-invitation dates and counts, your invitation opt-out and whether a verified tip has been acknowledged. These settings control optional invitations and are not sent to ChargeOut. Reports for a month, quarter, calendar year, Australian tax year or custom date range are generated on your device. App settings and custom tags are stored locally; a shared inbox passes imported receipts from the share extension to the main app on the same iPhone."
         ],
         [
             "3. Camera and text recognition",
@@ -59,8 +61,8 @@ const legalPages = {
             "Receipt Rescue is designed to keep a rolling seven years of receipts, subject to available device storage. It does not automatically remove receipts when they reach seven years. You can delete individual receipts, entire months, or confirm removal of receipts older than the seven-year cutoff in Settings → Manage Storage. These actions remove the selected local records and update affected monthly PDFs. The app checks available device storage to warn about low space and displays storage information to you; that information is not sent to ChargeOut. Deleting the app removes its local data, subject to normal iOS backup and restore behaviour. Deleting local records does not automatically erase exported copies or earlier device backups; manage those through the relevant destination or Apple settings."
         ],
         [
-            "8. Optional Pro export purchases",
-            "If your installed version offers a Pro export upgrade, payment is handled by Apple through the App Store. Apple’s privacy policy and purchase terms apply. ChargeOut does not receive your payment-card details. The app may use Apple’s purchase status and transaction information to verify access and restore the upgrade; receipt contents are not needed to make a purchase. In versions offering Pro Exports, one completed PDF export is free, and a local setting records when it is used. Cancelling or a failed share does not consume it. Scanning, importing, tagging, editing and previews remain free. Pro unlocks unlimited monthly and custom PDF exports with a one-time purchase. Its localized App Store price is shown before you buy. Restore Purchases verifies the upgrade with the same Apple Account. No custom Pro purchase service is offered by ChargeOut."
+            "8. Optional tips",
+            "<p>All features, including unlimited PDF exports, are free. Optional tips help cover development costs and do not unlock anything. Apple handles payment through the App Store; Apple’s privacy policy and purchase terms apply. ChargeOut does not receive your payment-card details. The app verifies tip transactions and saves an acknowledgement locally to stop automatic invitations. Where available, Apple’s finished consumable transaction history is used to retain this acknowledgement after reinstalling. There is no balance or feature entitlement to restore. Each tip is a separate one-time payment with the local App Store price shown before confirmation. Receipt contents are not needed to leave a tip. There is no developer purchase server.</p>"
         ],
         [
             "9. Support requests",
@@ -101,8 +103,8 @@ const legalPages = {
             "Open the current month or use <strong>Previous Months</strong>. Receipt Rescue maintains the monthly PDF in date order. Tap <strong>Export PDF</strong> to choose a destination. New versions include the same recorded-amount summary at the front of monthly PDFs. Existing receipts with no entered amount are flagged rather than treated as known zero-value expenses. Archiving a month keeps its receipt records on the device. PDFs shared outside the app are independent copies; later edits in Receipt Rescue do not update those copies."
         ],
         [
-            "Pro export upgrades",
-            "In versions offering <strong>Pro Exports</strong>, scanning, importing, storing, tags, editing and PDF previews are free. One completed PDF export is free so you can try the report; cancellation or a failed share does not use it. After that, a one-time Pro purchase unlocks unlimited monthly and custom PDF exports, with no subscription. The purchase screen shows your localized App Store price before purchase. Open <strong>Settings → Pro Exports &amp; Restore Purchases</strong>, or choose Export PDF. To restore an upgrade, use <strong>Restore Purchases</strong> with the Apple Account used to buy it. Purchases and restores may need an internet connection. If Pro is temporarily unavailable, your saved receipts and previews remain accessible. Contact us if a purchased upgrade is not recognised. Do not send payment-card details."
+            "Free features and optional tips",
+            "<p>All features are free, including scanning, imports, tags, editing, PDF previews and unlimited exports. Open <strong>Settings → Buy me a beer, or part of one</strong> to leave an optional tip to help cover development costs. The App Store shows your local price before you confirm each separate one-time payment. Tips can be repeated, unlock nothing and have no subscription or balance to restore. An internet connection may be needed for tipping; saved receipt reports and exports work on-device.</p><p>Automatic invitations can be dismissed and stop after a verified tip. The tip jar remains available in Settings. If a tip cannot be completed, all features remain available.</p>"
         ],
         [
             "Seven-year storage and deletion",
